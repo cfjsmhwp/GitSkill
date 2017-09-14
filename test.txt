@@ -1,2 +1,17 @@
 Creating a new branch is quick and simple.
-下面我们实战一下--no-ff方式的git merge：
+下面我们实战一下--no-ff方式的git merge：在，你的小伙伴要在dev分支上开发，就必须创建远程origin的dev分支到本地，于是他用这个命令创建本地dev分支：
+
+$ git checkout -b dev origin/dev
+现在，他就可以在dev上继续修改，然后，时不时地把dev分支push到远程：
+
+$ git commit -m "add /usr/bin/env"
+[dev 291bea8] add /usr/bin/env
+ 1 file changed, 1 insertion(+)
+$ git push origin dev
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 349 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:michaelliao/learngit.git
+   fc38031..291bea8  dev -> dev
